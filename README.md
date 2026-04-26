@@ -25,7 +25,6 @@ Ce projet est construit sans aucun framework lourd afin d'assurer des temps de c
 ```text
 /
 ├── index.html         # Point d'entrée principal (structure sémantique)
-├── DOCUMENTATION.md   # Documentation détaillée de l'architecture
 ├── README.md          # Présentation du projet
 ├── css/
 │   └── style.css      # Feuille de style (Responsive, Thème Terminal)
