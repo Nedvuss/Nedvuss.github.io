@@ -695,8 +695,23 @@ canvas#snake-game {
     color: var(--primary);
 }
 
+/* --- Tablet & Medium Screens --- */
+@media screen and (max-width: 1024px) {
+    section {
+        padding: 80px 5%;
+    }
+
+    .interactive-terminal {
+        width: 90%;
+    }
+}
+
 /* --- Mobile --- */
 @media screen and (max-width: 768px) {
+    section {
+        padding: 60px 5%;
+    }
+
     .nav-links {
         position: absolute;
         right: 0px;
@@ -728,10 +743,42 @@ canvas#snake-game {
     }
 
     .hero-text h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+        letter-spacing: 2px;
     }
 
-        canvas#snake-game {
+    .hero-text h2 {
+        font-size: 1.2rem;
+    }
+
+    .interactive-terminal {
+        width: 95%;
+        margin-top: 20px;
+    }
+
+    .terminal-body {
+        height: 180px;
+        font-size: 0.85rem;
+    }
+
+    .btn-container {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .btn-main, .btn-sec {
+        width: 100%;
+        padding: 12px 20px;
+    }
+
+    .title {
+        font-size: 2rem;
+        margin-bottom: 50px;
+    }
+
+    canvas#snake-game {
         width: 300px;
         height: 300px;
     }
