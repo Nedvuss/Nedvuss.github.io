@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de François Chamosset, étudiant spécialisé en infrastructure réseau, cybersécurité et télécommunications.">
+    <title>Portfolio | François Chamosset</title>
+    
+    <!-- SEO & Open Graph -->
+    <meta property="og:title" content="Portfolio | François Chamosset">
+    <meta property="og:description" content="Découvrez mon portfolio orienté cybersécurité, réseau et administration système.">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Portfolio | François Chamosset">
+    <meta name="twitter:description" content="Découvrez mon portfolio orienté cybersécurité, réseau et administration système.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">root@FC:~#</div>
+        <ul class="nav-links">
+            <li><a href="#accueil" data-i18n="nav-home">/home</a></li>
+            <li><a href="#competences" data-i18n="nav-skills">/skills</a></li>
+            <li><a href="#projets" data-i18n="nav-projects">/projects</a></li>
+            <li><a href="#passions" data-i18n="nav-hobbies">/hobbies</a></li>
+            <li><a href="#contact" data-i18n="nav-contact">/contact</a></li>
+            <li><button id="lang-toggle" class="lang-btn">FR</button></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <section id="accueil">
+        <div class="hero-text">
+            <h1>François Chamosset</h1>
+            <h2><span data-i18n="hero-iam">Je suis </span><span class="txt-type" data-wait="2000"></span></h2>
+            <p data-i18n="hero-desc">Spécialisé en infrastructure réseau, sécurisation des systèmes et télécommunications.<br> Bienvenue sur mon terminal.</p>
+            <div class="interactive-terminal">
+                <div class="terminal-header">
+                    <div class="term-buttons">
+                        <span class="term-btn close"></span>
+                        <span class="term-btn min"></span>
+                        <span class="term-btn max"></span>
+                    </div>
+                    <span>bash - root@FC:~</span>
+                    <div style="width: 50px;"></div>
+                </div>
+                <div class="terminal-body" id="term-body">
+                    <p class="term-output" data-i18n="term-welcome">Tapez 'help' pour voir la liste des commandes disponibles.</p>
+                    <div class="term-input-line">
+                        <span class="term-prompt"><span class="user">root@FC</span><span class="at">:</span><span class="path">~</span><span class="char">#</span></span>
+                        <input type="text" id="term-input" autocomplete="off" spellcheck="false" autofocus>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-container">
+                <a href="#projets" class="btn-main" data-i18n="btn-projects">./voir_projets.sh</a>
+                <a href="assets/CV.pdf" class="btn-sec" download="CV_Francois_Chamosset.pdf" aria-label="Télécharger le CV">
+                    <i class="fas fa-download" aria-hidden="true"></i> <span data-i18n="btn-cv">get_cv.pdf</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="competences" class="hidden-section">
+        <h2 class="title" data-i18n="sec-skills-title">&lt;Compétences /&gt;</h2>
+        <div class="skills-container">
+            <div class="skill-box">
+                <i class="fas fa-network-wired"></i>
+                <h3 data-i18n="skill-net-title">Architecture Réseau</h3>
+                <p data-i18n="skill-net-desc">Routing & Switching (Cisco), VLANs, OSPF/BGP, ACLs, Wireshark.</p>
+            </div>
+            <div class="skill-box">
+                <i class="fas fa-shield-alt"></i>
+                <h3 data-i18n="skill-sec-title">Cybersécurité</h3>
+                <p data-i18n="skill-sec-desc">Pentesting (Kali), Hardening, Firewalling (Pfsense), SIEM.</p>
+            </div>
+            <div class="skill-box">
+                <i class="fas fa-server"></i>
+                <h3 data-i18n="skill-sys-title">Administration Sys</h3>
+                <p data-i18n="skill-sys-desc">Linux (Arch/Kali), Windows Server, Active Directory, Virtualisation (Proxmox/ESXi).</p>
+            </div>
+            <div class="skill-box">
+                <i class="fas fa-terminal"></i> <h3 data-i18n="skill-script-title">Scripting & Auto</h3>
+                <p data-i18n="skill-script-desc">Python (Scapy/Socket), Bash, Powershell, Ansible.</p>
+            </div>
+            <div class="skill-box">
+                <i class="fas fa-comments"></i>
+                <h3 data-i18n="skill-com-title">Communication</h3>
+                <p data-i18n="skill-com-desc">Rédaction technique, vulgarisation, travail en équipe.</p>
+            </div>
+            <div class="skill-box">
+                <i class="fas fa-language"></i>
+                <h3 data-i18n="skill-eng-title">Anglais Professionnel</h3>
+                <p data-i18n="skill-eng-desc">Niveau C1 certifié (TOEIC). Capacité à évoluer en environnement international.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projets" class="hidden-section">
+        <h2 class="title" data-i18n="sec-projects-title">&lt;Executed_Projects /&gt;</h2>
+        <div class="projects-grid">
+            
+            <a href="https://github.com/Nedvuss" class="project-card" target="_blank">
+                <div class="card-header">
+                    <span class="badge">INFRA</span>
+                </div>
+                <h3 data-i18n="proj1-title">Secure Corp Network</h3>
+                <p data-i18n="proj1-desc">Déploiement d'une infrastructure redondante et sécurisée. Segmentation VLAN, configuration DMZ et implémentation Active Directory.</p>
+                <div class="tech-stack">
+                    <span>Cisco IOS</span>
+                    <span>Pfsense</span>
+                    <span>AD DS</span>
+                </div>
+            </a>
+
+            <a href="https://github.com/Nedvuss/Kapital" class="project-card" target="_blank">
+                <div class="card-header">
+                    <span class="badge">DEVSEC</span>
+                </div>
+                <h3 data-i18n="proj2-title">Financial Dashboard (PWA)</h3>
+                <p data-i18n="proj2-desc">Développement d'une interface web progressive avec focus sur la sécurité des échanges API et HTTPS.</p>
+                <div class="tech-stack">
+                    <span>HTTPS/TLS</span>
+                    <span>API Security</span>
+                    <span>JS</span>
+                </div>
+            </a>
+
+            <a href="https://github.com/Nedvuss" class="project-card" target="_blank">
+                <div class="card-header">
+                    <span class="badge">SIGNAL</span>
+                </div>
+                <h3 data-i18n="proj3-title">Audio Signal Processing</h3>
+                <p data-i18n="proj3-desc">Analyse spectrale et traitement du signal audio. Implémentation d'algorithmes de modulation/démodulation.</p>
+                <div class="tech-stack">
+                    <span>Python DSP</span>
+                    <span>Fourier</span>
+                    <span>Algorithmique</span>
+                </div>
+            </a>
+
+            <a href="https://github.com/Nedvuss" class="project-card" target="_blank">
+                <div class="card-header">
+                    <span class="badge">HOMELAB</span>
+                </div>
+                <h3 data-i18n="proj4-title">Home Server / Lab</h3>
+                <p data-i18n="proj4-desc">Serveur personnel auto-hébergé avec virtualisation, conteneurisation et services (NAS, Web).</p>
+                <div class="tech-stack">
+                    <span>Proxmox</span>
+                    <span>Docker</span>
+                    <span>Linux</span>
+                </div>
+            </a>
+
+            <a href="https://github.com/Nedvuss" class="project-card" target="_blank">
+                <div class="card-header">
+                    <span class="badge">RECH</span>
+                </div>
+                <h3 data-i18n="proj5-title">PDF Link Parser (CNRS)</h3>
+                <p data-i18n="proj5-desc">Plugin web de parsing de documents PDF pour identifier et extraire automatiquement les liens lors d'un stage au CNRS.</p>
+                <div class="tech-stack">
+                    <span>Python</span>
+                    <span>JavaScript</span>
+                    <span>PDF parsing</span>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <section id="passions" class="hidden-section">
+        <h2 class="title" data-i18n="sec-hobbies-title">&lt;Hobbies /&gt;</h2>
+        <div class="skills-container"> <div class="skill-box passion-box">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3 data-i18n="hobby1-title">Analyse Financière</h3>
+                <p data-i18n="hobby1-desc">Étude des marchés et corrélation des actifs boursiers.</p>
+            </div>
+            <div class="skill-box passion-box">
+                <i class="fas fa-snowflake"></i>
+                <h3 data-i18n="hobby2-title">Ski Freeride</h3>
+                <p data-i18n="hobby2-desc">Navigation hors-piste et gestion des risques en montagne.</p>
+            </div>
+            <div class="skill-box passion-box">
+                <i class="fa-solid fa-drum"></i>
+                <h3 data-i18n="hobby3-title">Batterie</h3>
+                <p data-i18n="hobby3-desc">Pratique instrumentale et performance en concerts.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h2 data-i18n="contact-title">Initiate_Contact</h2>
+        <p data-i18n="contact-desc">Prêt à rejoindre votre infrastructure.</p>
+        <a href="mailto:chamossetf74@gmail.com" class="email-link" aria-label="Envoyer un email">chamossetf74@gmail.com</a>
+        <div class="socials">
+            <a href="https://linkedin.com/in/francois-chamosset" aria-label="Profil LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+            <a href="https://github.com/Nedvuss" target="_blank" aria-label="Profil GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+        </div>
+        <p class="copyright" data-i18n="footer-copy">© 2026 François Chamosset | root@localhost</p>
+    </footer>
+
+    <!-- Easter Egg Snake Modal -->
+    <div id="snake-modal" class="modal-hidden">
+        <div class="snake-container">
+            <div class="snake-header">
+                <h2>root@localhost:~/snake.sh</h2>
+                <button id="close-snake">x</button>
+            </div>
+            <canvas id="snake-game" width="400" height="400"></canvas>
+            <div class="snake-info">
+                <p>Score: <span id="snake-score">0</span> | <span data-i18n="snake-instr">Utilisez les flèches pour jouer</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/snake.js"></script>
+    <script src="js/terminal.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

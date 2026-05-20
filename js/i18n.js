@@ -1,0 +1,141 @@
+const translations = {
+    fr: {
+        "nav-home": "/accueil",
+        "nav-skills": "/compétences",
+        "nav-projects": "/projets",
+        "nav-hobbies": "/passions",
+        "nav-contact": "/contact",
+        "sec-skills-title": "&lt;Compétences /&gt;",
+        "sec-projects-title": "&lt;Projets_Réalisés /&gt;",
+        "sec-hobbies-title": "&lt;Passions /&gt;",
+        "hero-iam": "Je suis ",
+        "hero-desc": "Spécialisé en infrastructure réseau, sécurisation des systèmes et télécommunications.</br> Bienvenue sur mon terminal.",
+        "btn-projects": "./voir_projets.sh",
+        "btn-cv": "get_cv.pdf",
+        "skill-net-title": "Architecture Réseau",
+        "skill-net-desc": "Routing & Switching (Cisco), VLANs, OSPF/BGP, ACLs, Wireshark.",
+        "skill-sec-title": "Cybersécurité",
+        "skill-sec-desc": "Pentesting (Kali), Hardening, Firewalling (Pfsense), SIEM.",
+        "skill-sys-title": "Administration Sys",
+        "skill-sys-desc": "Linux (Arch/Kali), Windows Server, Active Directory, Virtualisation (Proxmox/ESXi).",
+        "skill-script-title": "Scripting & Auto",
+        "skill-script-desc": "Python (Scapy/Socket), Bash, Powershell, Ansible.",
+        "skill-com-title": "Communication",
+        "skill-com-desc": "Rédaction technique, vulgarisation, travail en équipe.",
+        "skill-eng-title": "Anglais Professionnel",
+        "skill-eng-desc": "Niveau C1 certifié (TOEIC). Capacité à évoluer en environnement international.",
+        "proj1-title": "Secure Corp Network",
+        "proj1-desc": "Déploiement d'une infrastructure redondante et sécurisée. Segmentation VLAN, configuration DMZ et implémentation Active Directory.",
+        "proj2-title": "Financial Dashboard (PWA)",
+        "proj2-desc": "Développement d'une interface web progressive avec focus sur la sécurité des échanges API et HTTPS.",
+        "proj3-title": "Audio Signal Processing",
+        "proj3-desc": "Analyse spectrale et traitement du signal audio. Implémentation d'algorithmes de modulation/démodulation.",
+        "proj4-title": "Home Server / Lab",
+        "proj4-desc": "Mise en place d'un serveur personnel (Homelab) avec virtualisation (Proxmox), conteneurs (Docker) et auto-hébergement.",
+        "proj5-title": "Parser de liens PDF (CNRS)",
+        "proj5-desc": "Plugin web de parsing de PDF pour identifier automatiquement les hyperliens et les classer durant un stage au CNRS.",
+        "hobby1-title": "Analyse Financière",
+        "hobby1-desc": "Étude des marchés et corrélation des actifs boursiers.",
+        "hobby2-title": "Ski Freeride",
+        "hobby2-desc": "Navigation hors-piste et gestion des risques en montagne.",
+        "hobby3-title": "Batterie",
+        "hobby3-desc": "Pratique instrumentale et performance en concerts.",
+        "contact-title": "Initier_Contact",
+        "contact-desc": "Prêt à rejoindre votre infrastructure.",
+        "footer-copy": "© 2026 François Chamosset | root@localhost",
+        "typewriter": ["un futur admin sys.", "passionné de cybersécurité.", "étudiant R&T."],
+        "snake-instr": "Utilisez les flèches pour jouer",
+        "term-welcome": "Tapez 'help' pour voir la liste des commandes disponibles.",
+        "term-help": "Commandes disponibles : <br>- <span class='term-output-highlight'>whoami</span> : Affiche mes infos<br>- <span class='term-output-highlight'>ls</span> : Liste les sections<br>- <span class='term-output-highlight'>clear</span> : Efface le terminal<br>- <span class='term-output-highlight'>contact</span> : Affiche les infos de contact<br>- <span class='term-output-highlight'>mail</span> : Rédiger un email<br>- <span class='term-output-highlight'>history</span> : Historique des commandes<br>- <span class='term-output-highlight'>date</span> : Affiche la date<br>- <span class='term-output-highlight'>neofetch</span> : Affiche le système",
+        "term-sudo": "bash: sudo: permission non accordée. Cet incident a été signalé.",
+        "term-whoami": "François Chamosset<br>Étudiant en Admin Sys & Sécurité Réseau<br>À la recherche de nouveaux défis.",
+        "term-ls": "Contenu du répertoire :<br>drwxr-xr-x  2 root root  4096 <a href='#accueil' style='color:var(--primary);text-decoration:none;'>home/</a><br>drwxr-xr-x  2 root root  4096 <a href='#competences' style='color:var(--primary);text-decoration:none;'>skills/</a><br>drwxr-xr-x  2 root root  4096 <a href='#projets' style='color:var(--primary);text-decoration:none;'>projects/</a><br>drwxr-xr-x  2 root root  4096 <a href='#passions' style='color:var(--primary);text-decoration:none;'>hobbies/</a><br>drwxr-xr-x  2 root root  4096 <a href='#contact' style='color:var(--primary);text-decoration:none;'>contact/</a>",
+        "term-contact": "Email: chamossetf74@gmail.com<br>LinkedIn: linkedin.com/in/francois-chamosset<br>GitHub: github.com/Nedvuss",
+        "term-notfound": "Commande introuvable. Tapez 'help' pour afficher les commandes.",
+        "term-mail-init": "Lancement de la procédure d'envoi d'email...",
+        "term-mail-sub-prompt": "Sujet : ",
+        "term-mail-body-prompt": "Message : ",
+        "term-mail-sent": "Ouverture de votre client mail par défaut..."
+    },
+    en: {
+        "nav-home": "/home",
+        "nav-skills": "/skills",
+        "nav-projects": "/projects",
+        "nav-hobbies": "/hobbies",
+        "nav-contact": "/contact",
+        "sec-skills-title": "&lt;Skills /&gt;",
+        "sec-projects-title": "&lt;Executed_Projects /&gt;",
+        "sec-hobbies-title": "&lt;Hobbies /&gt;",
+        "hero-iam": "I am ",
+        "hero-desc": "Specializing in network infrastructure, system security, and telecommunications.</br> Welcome to my terminal.",
+        "btn-projects": "./view_projects.sh",
+        "btn-cv": "get_resume.pdf",
+        "skill-net-title": "Network Architecture",
+        "skill-net-desc": "Routing & Switching (Cisco), VLANs, OSPF/BGP, ACLs, Wireshark.",
+        "skill-sec-title": "Cybersecurity",
+        "skill-sec-desc": "Pentesting (Kali), Hardening, Firewalling (Pfsense), SIEM.",
+        "skill-sys-title": "Sysadmin",
+        "skill-sys-desc": "Linux (Arch/Kali), Windows Server, Active Directory, Virtualization (Proxmox/ESXi).",
+        "skill-script-title": "Scripting & Auto",
+        "skill-script-desc": "Python (Scapy/Socket), Bash, Powershell, Ansible.",
+        "skill-com-title": "Communication",
+        "skill-com-desc": "Technical writing, vulgarization, teamwork.",
+        "skill-eng-title": "Professional English",
+        "skill-eng-desc": "C1 level certified (TOEIC). Ability to work in an international environment.",
+        "proj1-title": "Secure Corp Network",
+        "proj1-desc": "Deployment of a redundant and secure infrastructure. VLAN segmentation, DMZ configuration, and Active Directory implementation.",
+        "proj2-title": "Financial Dashboard (PWA)",
+        "proj2-desc": "Development of a progressive web app focusing on API and HTTPS exchange security.",
+        "proj3-title": "Audio Signal Processing",
+        "proj3-desc": "Spectral analysis and audio signal processing. Implementation of modulation/demodulation algorithms.",
+        "proj4-title": "Home Server / Lab",
+        "proj4-desc": "Deployment of a personal server (Homelab) featuring virtualization (Proxmox), containerization (Docker) and self-hosted services.",
+        "proj5-title": "PDF Link Parser (CNRS)",
+        "proj5-desc": "Web plugin for PDF parsing to automatically detect hyperlinks during an internship at CNRS.",
+        "hobby1-title": "Financial Analysis",
+        "hobby1-desc": "Market study and asset correlation.",
+        "hobby2-title": "Freeride Skiing",
+        "hobby2-desc": "Off-piste navigation and mountain risk management.",
+        "hobby3-title": "Drums",
+        "hobby3-desc": "Instrumental practice and live performances.",
+        "contact-title": "Initiate_Contact",
+        "contact-desc": "Ready to join your infrastructure.",
+        "footer-copy": "© 2026 François Chamosset | root@localhost",
+        "typewriter": ["a future sysadmin.", "passionate about cybersecurity.", "a networking student."],
+        "snake-instr": "Use arrow keys to play",
+        "term-welcome": "Type 'help' to see the list of available commands.",
+        "term-help": "Available commands: <br>- <span class='term-output-highlight'>whoami</span>: Displays my info<br>- <span class='term-output-highlight'>ls</span>: Lists sections<br>- <span class='term-output-highlight'>clear</span>: Clears the terminal<br>- <span class='term-output-highlight'>contact</span>: Shows contact details<br>- <span class='term-output-highlight'>mail</span>: Compose an email<br>- <span class='term-output-highlight'>history</span>: Command history<br>- <span class='term-output-highlight'>date</span>: Shows current date<br>- <span class='term-output-highlight'>neofetch</span>: System info",
+        "term-sudo": "bash: sudo: permission denied. This incident will be reported.",
+        "term-whoami": "François Chamosset<br>Sysadmin & Network Security Student<br>Currently looking for new challenges.",
+        "term-ls": "Directory listing:<br>drwxr-xr-x  2 root root  4096 <a href='#accueil' style='color:var(--primary);text-decoration:none;'>home/</a><br>drwxr-xr-x  2 root root  4096 <a href='#competences' style='color:var(--primary);text-decoration:none;'>skills/</a><br>drwxr-xr-x  2 root root  4096 <a href='#projets' style='color:var(--primary);text-decoration:none;'>projects/</a><br>drwxr-xr-x  2 root root  4096 <a href='#passions' style='color:var(--primary);text-decoration:none;'>hobbies/</a><br>drwxr-xr-x  2 root root  4096 <a href='#contact' style='color:var(--primary);text-decoration:none;'>contact/</a>",
+        "term-contact": "Email: chamossetf74@gmail.com<br>LinkedIn: linkedin.com/in/francois-chamosset<br>GitHub: github.com/Nedvuss",
+        "term-notfound": "Command not found. Type 'help' for available commands.",
+        "term-mail-init": "Initiating mail sending sequence...",
+        "term-mail-sub-prompt": "Subject: ",
+        "term-mail-body-prompt": "Message: ",
+        "term-mail-sent": "Opening your default mail client..."
+    }
+};
+
+window.currentLang = localStorage.getItem('lang') || 'fr';
+
+function setLanguage(lang) {
+    window.currentLang = lang;
+    localStorage.setItem('lang', lang);
+
+    const langBtn = document.getElementById('lang-toggle');
+    if (langBtn) {
+        langBtn.innerText = lang === 'fr' ? 'FR' : 'EN';
+    }
+
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+            el.innerHTML = translations[lang][key];
+        }
+    });
+
+    if (window.typeWriterInstance) {
+        window.typeWriterInstance.updateWords(translations[lang].typewriter);
+    }
+}
