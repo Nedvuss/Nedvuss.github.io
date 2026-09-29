@@ -3,34 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de François Chamosset, étudiant spécialisé en infrastructure réseau, cybersécurité et télécommunications.">
-    <title>Portfolio | François Chamosset</title>
-    
+    <meta name="description" content="Portfolio de François Chamosset, étudiant spécialisé en cybersécurité, réseau et administration système.">
+    <title>François Chamosset — Réseau & Cybersécurité</title>
     <!-- SEO & Open Graph -->
-    <meta property="og:title" content="Portfolio | François Chamosset">
-    <meta property="og:description" content="Découvrez mon portfolio orienté cybersécurité, réseau et administration système.">
+    <meta property="og:title" content="François Chamosset — Réseau & Cybersécurité">
+    <meta property="og:description" content="Étudiant en B.U.T. R&T — Cybersécurité, réseau, administration système.">
     <meta property="og:type" content="website">
-    
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Portfolio | François Chamosset">
-    <meta name="twitter:description" content="Découvrez mon portfolio orienté cybersécurité, réseau et administration système.">
-    
     <!-- Favicon -->
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- NAVBAR -->
     <nav class="navbar">
-        <div class="logo">root@FC:~#</div>
+        <div class="logo">François<span class="accent-dot">.</span></div>
         <ul class="nav-links">
             <li><a href="#accueil" data-i18n="nav-home">/home</a></li>
+            <li><a href="#about" data-i18n="nav-about">À propos</a></li>
             <li><a href="#competences" data-i18n="nav-skills">/skills</a></li>
+            <li><a href="#experience" data-i18n="nav-experience">Parcours</a></li>
             <li><a href="#projets" data-i18n="nav-projects">/projects</a></li>
-            <li><a href="#passions" data-i18n="nav-hobbies">/hobbies</a></li>
             <li><a href="#contact" data-i18n="nav-contact">/contact</a></li>
             <li><button id="lang-toggle" class="lang-btn">FR</button></li>
         </ul>
@@ -41,174 +38,337 @@
         </div>
     </nav>
 
+    <!-- HERO -->
     <section id="accueil">
-        <div class="hero-text">
-            <h1>François Chamosset</h1>
-            <h2><span data-i18n="hero-iam">Je suis </span><span class="txt-type" data-wait="2000"></span></h2>
-            <p data-i18n="hero-desc">Spécialisé en infrastructure réseau, sécurisation des systèmes et télécommunications.<br> Bienvenue sur mon terminal.</p>
-            <div class="interactive-terminal">
-                <div class="terminal-header">
-                    <div class="term-buttons">
-                        <span class="term-btn close"></span>
-                        <span class="term-btn min"></span>
-                        <span class="term-btn max"></span>
-                    </div>
-                    <span>bash - root@FC:~</span>
-                    <div style="width: 50px;"></div>
-                </div>
-                <div class="terminal-body" id="term-body">
-                    <p class="term-output" data-i18n="term-welcome">Tapez 'help' pour voir la liste des commandes disponibles.</p>
-                    <div class="term-input-line">
-                        <span class="term-prompt"><span class="user">root@FC</span><span class="at">:</span><span class="path">~</span><span class="char">#</span></span>
-                        <input type="text" id="term-input" autocomplete="off" spellcheck="false" autofocus>
-                    </div>
-                </div>
+        <div class="hero-content">
+            <div class="available-badge">
+                <span class="badge-dot"></span>
+                <span data-i18n="available-badge">🟢 Disponible — Alternance 2026-2027</span>
             </div>
-
+            <div class="hero-text">
+                <h1>François Chamosset</h1>
+                <h2><span data-i18n="hero-iam">Je suis </span><span class="txt-type" data-wait="2000"></span></h2>
+                <p data-i18n="hero-desc">Spécialisé en infrastructure réseau, sécurisation des systèmes et télécommunications.</p>
+            </div>
             <div class="btn-container">
-                <a href="#projets" class="btn-main" data-i18n="btn-projects">./voir_projets.sh</a>
-                <a href="assets/CV.pdf" class="btn-sec" download="CV_Francois_Chamosset.pdf" aria-label="Télécharger le CV">
-                    <i class="fas fa-download" aria-hidden="true"></i> <span data-i18n="btn-cv">get_cv.pdf</span>
+                <a href="#projets" class="btn-primary" data-i18n="btn-projects-new">Voir les projets</a>
+                <a href="assets/CV_.pdf" class="btn-outline" download="CV_.pdf" aria-label="Télécharger le CV">
+                    <i class="fas fa-download" aria-hidden="true"></i> <span data-i18n="btn-cv-new">Télécharger CV</span>
                 </a>
             </div>
         </div>
-    </section>
-
-    <section id="competences" class="hidden-section">
-        <h2 class="title" data-i18n="sec-skills-title">&lt;Compétences /&gt;</h2>
-        <div class="skills-container">
-            <div class="skill-box">
-                <i class="fas fa-network-wired"></i>
-                <h3 data-i18n="skill-net-title">Architecture Réseau</h3>
-                <p data-i18n="skill-net-desc">Routing & Switching (Cisco), VLANs, OSPF/BGP, ACLs, Wireshark.</p>
-            </div>
-            <div class="skill-box">
-                <i class="fas fa-shield-alt"></i>
-                <h3 data-i18n="skill-sec-title">Cybersécurité</h3>
-                <p data-i18n="skill-sec-desc">Pentesting (Kali), Hardening, Firewalling (Pfsense), SIEM.</p>
-            </div>
-            <div class="skill-box">
-                <i class="fas fa-server"></i>
-                <h3 data-i18n="skill-sys-title">Administration Sys</h3>
-                <p data-i18n="skill-sys-desc">Linux (Arch/Kali), Windows Server, Active Directory, Virtualisation (Proxmox/ESXi).</p>
-            </div>
-            <div class="skill-box">
-                <i class="fas fa-terminal"></i> <h3 data-i18n="skill-script-title">Scripting & Auto</h3>
-                <p data-i18n="skill-script-desc">Python (Scapy/Socket), Bash, Powershell, Ansible.</p>
-            </div>
-            <div class="skill-box">
-                <i class="fas fa-comments"></i>
-                <h3 data-i18n="skill-com-title">Communication</h3>
-                <p data-i18n="skill-com-desc">Rédaction technique, vulgarisation, travail en équipe.</p>
-            </div>
-            <div class="skill-box">
-                <i class="fas fa-language"></i>
-                <h3 data-i18n="skill-eng-title">Anglais Professionnel</h3>
-                <p data-i18n="skill-eng-desc">Niveau C1 certifié (TOEIC). Capacité à évoluer en environnement international.</p>
+        <div class="hero-visual">
+            <div class="hero-svg-container">
+                <!-- SVG Network Animation -->
+                <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Connections -->
+                    <line x1="200" y1="200" x2="80" y2="100" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.3"/>
+                    <line x1="200" y1="200" x2="320" y2="100" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.3"/>
+                    <line x1="200" y1="200" x2="60" y2="280" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.3"/>
+                    <line x1="200" y1="200" x2="340" y2="280" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.3"/>
+                    <line x1="200" y1="200" x2="200" y2="60" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.3"/>
+                    <line x1="200" y1="200" x2="200" y2="360" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.3"/>
+                    <line x1="80" y1="100" x2="200" y2="60" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.2"/>
+                    <line x1="320" y1="100" x2="200" y2="60" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.2"/>
+                    <line x1="60" y1="280" x2="200" y2="360" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.2"/>
+                    <line x1="340" y1="280" x2="200" y2="360" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.2"/>
+                    <!-- Nodes -->
+                    <circle class="node" cx="200" cy="200" r="18" fill="#38bdf8" fill-opacity="0.15" stroke="#38bdf8" stroke-width="2" style="animation-delay:0s"/>
+                    <circle class="node" cx="200" cy="200" r="8" fill="#38bdf8" style="animation-delay:0s"/>
+                    <circle class="node" cx="80" cy="100" r="10" fill="#0ea5e9" fill-opacity="0.2" stroke="#0ea5e9" stroke-width="1.5" style="animation-delay:0.3s"/>
+                    <circle cx="80" cy="100" r="4" fill="#0ea5e9"/>
+                    <circle class="node" cx="320" cy="100" r="10" fill="#0ea5e9" fill-opacity="0.2" stroke="#0ea5e9" stroke-width="1.5" style="animation-delay:0.6s"/>
+                    <circle cx="320" cy="100" r="4" fill="#0ea5e9"/>
+                    <circle class="node" cx="60" cy="280" r="10" fill="#0ea5e9" fill-opacity="0.2" stroke="#0ea5e9" stroke-width="1.5" style="animation-delay:0.9s"/>
+                    <circle cx="60" cy="280" r="4" fill="#0ea5e9"/>
+                    <circle class="node" cx="340" cy="280" r="10" fill="#0ea5e9" fill-opacity="0.2" stroke="#0ea5e9" stroke-width="1.5" style="animation-delay:1.2s"/>
+                    <circle cx="340" cy="280" r="4" fill="#0ea5e9"/>
+                    <circle class="node" cx="200" cy="60" r="8" fill="#7dd3fc" fill-opacity="0.2" stroke="#7dd3fc" stroke-width="1.5" style="animation-delay:1.5s"/>
+                    <circle cx="200" cy="60" r="3" fill="#7dd3fc"/>
+                    <circle class="node" cx="200" cy="360" r="8" fill="#7dd3fc" fill-opacity="0.2" stroke="#7dd3fc" stroke-width="1.5" style="animation-delay:1.8s"/>
+                    <circle cx="200" cy="360" r="3" fill="#7dd3fc"/>
+                </svg>
             </div>
         </div>
     </section>
 
+    <!-- ABOUT -->
+    <section id="about" class="hidden-section">
+        <h2 class="section-title"><span class="title-bracket">&lt;</span><span data-i18n="sec-about-title">À Propos</span><span class="title-bracket">/&gt;</span></h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <p data-i18n="about-desc">En 2ème année de B.U.T. Réseaux & Télécommunications (Parcours Cybersécurité), je me spécialise en sécurité réseau, administration système et développement. Curieux et en veille technologique permanente, j'ai acquis une expérience pratique via mon homelab, des CTF (Root-me 300 pts, HackTheBox) et un stage au CNRS. Je recherche une alternance pour 2026-2027.</p>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-num" data-target="5">5+</div>
+                        <div class="stat-label" data-i18n="about-stat1-label">Projets réalisés</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-num" data-target="980">980</div>
+                        <div class="stat-label" data-i18n="about-stat2-label">TOEIC (C1)</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-num" data-target="300">300</div>
+                        <div class="stat-label" data-i18n="about-stat3-label">Root-me pts</div>
+                    </div>
+                </div>
+                <a href="assets/CV_.pdf" class="btn-outline" style="margin-top: 28px; display: inline-flex; align-items: center; gap: 8px;" download>
+                    <i class="fas fa-download"></i> <span data-i18n="about-cta">Voir mon CV</span>
+                </a>
+            </div>
+            <div class="about-terminal">
+                <!-- Terminal interactif -->
+                <div class="interactive-terminal">
+                    <div class="terminal-header">
+                        <div class="term-buttons">
+                            <span class="term-btn close"></span>
+                            <span class="term-btn min"></span>
+                            <span class="term-btn max"></span>
+                        </div>
+                        <span>bash — root@FC:~</span>
+                        <div style="width: 50px;"></div>
+                    </div>
+                    <div class="terminal-body" id="term-body">
+                        <p class="term-output" data-i18n="term-welcome">Tapez 'help' pour voir la liste des commandes disponibles.</p>
+                        <div class="term-input-line">
+                            <span class="term-prompt"><span class="user">root@FC</span><span class="at">:</span><span class="path">~</span><span class="char">#</span></span>
+                            <input type="text" id="term-input" autocomplete="off" spellcheck="false">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="competences" class="hidden-section">
+        <h2 class="section-title"><span class="title-bracket">&lt;</span>Compétences<span class="title-bracket">/&gt;</span></h2>
+        <div class="skill-categories-grid">
+            <div class="skill-category">
+                <div class="skill-category-header">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3 data-i18n="skill-sec-title">Cybersécurité</h3>
+                </div>
+                <div class="tech-tags">
+                    <span class="tech-tag">Kali Linux</span>
+                    <span class="tech-tag">Pentest</span>
+                    <span class="tech-tag">CTF</span>
+                    <span class="tech-tag">Root-me</span>
+                    <span class="tech-tag">HackTheBox</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <div class="skill-category-header">
+                    <i class="fas fa-network-wired"></i>
+                    <h3 data-i18n="skill-net-title">Architecture Réseau</h3>
+                </div>
+                <div class="tech-tags">
+                    <span class="tech-tag">IP/TCP/UDP</span>
+                    <span class="tech-tag">VLAN</span>
+                    <span class="tech-tag">DHCP / DNS</span>
+                    <span class="tech-tag">NAT / VPN</span>
+                    <span class="tech-tag">Firewall</span>
+                    <span class="tech-tag">Wi-Fi</span>
+                    <span class="tech-tag">LAN / WAN</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <div class="skill-category-header">
+                    <i class="fas fa-server"></i>
+                    <h3 data-i18n="skill-sys-title">Systèmes & Virtualisation</h3>
+                </div>
+                <div class="tech-tags">
+                    <span class="tech-tag">Windows Server</span>
+                    <span class="tech-tag">Linux</span>
+                    <span class="tech-tag">Active Directory</span>
+                    <span class="tech-tag">Azure / Entra ID</span>
+                    <span class="tech-tag">Office 365</span>
+                    <span class="tech-tag">TrueNAS</span>
+                    <span class="tech-tag">VMware ESXi</span>
+                    <span class="tech-tag">VirtualBox</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <div class="skill-category-header">
+                    <i class="fas fa-code"></i>
+                    <h3 data-i18n="skill-script-title">Développement & Scripting</h3>
+                </div>
+                <div class="tech-tags">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Bash</span>
+                    <span class="tech-tag">PowerShell</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">PHP</span>
+                    <span class="tech-tag">HTML/CSS</span>
+                    <span class="tech-tag">SQL</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <div class="skill-category-header">
+                    <i class="fas fa-language"></i>
+                    <h3>Langues</h3>
+                </div>
+                <div class="tech-tags">
+                    <span class="tech-tag">Français (natif)</span>
+                    <span class="tech-tag">Anglais C1 (TOEIC 980)</span>
+                    <span class="tech-tag">Espagnol (notions)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="hidden-section">
+        <h2 class="section-title"><span class="title-bracket">&lt;</span><span data-i18n="sec-exp-title">Parcours</span><span class="title-bracket">/&gt;</span></h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-date" data-i18n="exp1-date">2024 — 2028</div>
+                <div class="timeline-content">
+                    <div class="timeline-title" data-i18n="exp1-title">B.U.T. Réseaux & Télécommunications — Cybersécurité</div>
+                    <div class="timeline-place" data-i18n="exp1-place">IUT Annecy le Vieux (SecNumEdu ANSSI)</div>
+                    <p class="timeline-desc" data-i18n="exp1-desc">Formation labellisée SecNumEdu. En 2ème année.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date" data-i18n="exp2-date">2026</div>
+                <div class="timeline-content">
+                    <div class="timeline-title" data-i18n="exp2-title">Stage — Laboratoire Jean Kuntzmann</div>
+                    <div class="timeline-place" data-i18n="exp2-place">CNRS — Grenoble</div>
+                    <p class="timeline-desc" data-i18n="exp2-desc">Développement d'une extension Firefox 'PDF Links' pour les modérateurs d'archives scientifiques HAL : extraction et classification automatique des liens forge depuis les PDFs.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date" data-i18n="exp3-date">2022</div>
+                <div class="timeline-content">
+                    <div class="timeline-title" data-i18n="exp3-title">Cadets de la Gendarmerie</div>
+                    <div class="timeline-place" data-i18n="exp3-place">Groupement de Haute-Savoie</div>
+                    <p class="timeline-desc" data-i18n="exp3-desc">Programme civique de formation aux métiers de la sécurité publique. Rigueur, sens des responsabilités, esprit d'équipe.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date" data-i18n="exp4-date">2023</div>
+                <div class="timeline-content">
+                    <div class="timeline-title" data-i18n="exp4-title">Baccalauréat Général</div>
+                    <div class="timeline-place" data-i18n="exp4-place">Lycée Saint Michel — Annecy</div>
+                    <p class="timeline-desc" data-i18n="exp4-desc"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
     <section id="projets" class="hidden-section">
-        <h2 class="title" data-i18n="sec-projects-title">&lt;Executed_Projects /&gt;</h2>
+        <h2 class="section-title"><span class="title-bracket">&lt;</span>Projets<span class="title-bracket">/&gt;</span></h2>
         <div class="projects-grid">
-            
             <a href="https://github.com/Nedvuss" class="project-card" target="_blank">
                 <div class="card-header">
                     <span class="badge">INFRA</span>
+                    <span class="status-badge status-done" data-i18n="status-done">✓ Terminé</span>
                 </div>
-                <h3 data-i18n="proj1-title">Secure Corp Network</h3>
-                <p data-i18n="proj1-desc">Déploiement d'une infrastructure redondante et sécurisée. Segmentation VLAN, configuration DMZ et implémentation Active Directory.</p>
+                <h3 data-i18n="proj1-title">Déploiement réseau PME</h3>
+                <p data-i18n="proj1-desc">Conception et déploiement d'un réseau complet pour une PME fictive. Configuration de routeurs et switches Cisco, segmentation par VLANs, routage inter-VLAN, mise en place d'un firewall PfSense et d'une DMZ.</p>
                 <div class="tech-stack">
-                    <span>Cisco IOS</span>
-                    <span>Pfsense</span>
-                    <span>AD DS</span>
+                    <span>Cisco IOS</span><span>VLANs</span><span>PfSense</span><span>DMZ</span>
                 </div>
             </a>
-
-            <a href="https://github.com/Nedvuss/Kapital" class="project-card" target="_blank">
+            <a href="https://github.com/Nedvuss" class="project-card" target="_blank">
                 <div class="card-header">
-                    <span class="badge">DEVSEC</span>
+                    <span class="badge">SECURITY</span>
+                    <span class="status-badge status-done" data-i18n="status-done">✓ Terminé</span>
                 </div>
-                <h3 data-i18n="proj2-title">Financial Dashboard (PWA)</h3>
-                <p data-i18n="proj2-desc">Développement d'une interface web progressive avec focus sur la sécurité des échanges API et HTTPS.</p>
+                <h3 data-i18n="proj2-title">Audit de sécurité — Vulnhub</h3>
+                <p data-i18n="proj2-desc">Audit de sécurité offensif sur une machine Vulnhub. Phases de reconnaissance, scan de ports, exploitation de vulnérabilités, élévation de privilèges et rédaction d'un rapport de remédiation. Environnement Kali Linux.</p>
                 <div class="tech-stack">
-                    <span>HTTPS/TLS</span>
-                    <span>API Security</span>
-                    <span>JS</span>
+                    <span>Kali Linux</span><span>Pentest</span><span>Vulnhub</span><span>Nmap</span>
                 </div>
             </a>
-
             <a href="https://github.com/Nedvuss" class="project-card" target="_blank">
                 <div class="card-header">
                     <span class="badge">SIGNAL</span>
+                    <span class="status-badge status-done" data-i18n="status-done">✓ Terminé</span>
                 </div>
-                <h3 data-i18n="proj3-title">Audio Signal Processing</h3>
-                <p data-i18n="proj3-desc">Analyse spectrale et traitement du signal audio. Implémentation d'algorithmes de modulation/démodulation.</p>
+                <h3 data-i18n="proj3-title">Modulation de signal AM</h3>
+                <p data-i18n="proj3-desc">Implémentation en Python d'un modulateur et démodulateur AM. Analyse spectrale par transformée de Fourier, visualisation des signaux temporels et fréquentiels, étude des effets du bruit.</p>
                 <div class="tech-stack">
-                    <span>Python DSP</span>
-                    <span>Fourier</span>
-                    <span>Algorithmique</span>
+                    <span>Python</span><span>NumPy</span><span>Matplotlib</span><span>FFT</span>
                 </div>
             </a>
-
             <a href="https://github.com/Nedvuss" class="project-card" target="_blank">
                 <div class="card-header">
-                    <span class="badge">HOMELAB</span>
+                    <span class="badge">WEB</span>
+                    <span class="status-badge status-done" data-i18n="status-done">✓ Terminé</span>
                 </div>
-                <h3 data-i18n="proj4-title">Home Server / Lab</h3>
-                <p data-i18n="proj4-desc">Serveur personnel auto-hébergé avec virtualisation, conteneurisation et services (NAS, Web).</p>
+                <h3 data-i18n="proj4-title">Financial Dashboard (PWA)</h3>
+                <p data-i18n="proj4-desc">Développement d'une application web financière Progressive (PWA) mobile-first avec mode hors-ligne (Service Worker). Visualisation de données de marché, focus sur la sécurité des échanges : HTTPS/TLS, authentification et sécurisation des appels API.</p>
                 <div class="tech-stack">
-                    <span>Proxmox</span>
-                    <span>Docker</span>
-                    <span>Linux</span>
+                    <span>JavaScript</span><span>PWA</span><span>HTTPS/TLS</span><span>API Security</span>
                 </div>
             </a>
-
             <a href="https://github.com/Nedvuss" class="project-card" target="_blank">
                 <div class="card-header">
-                    <span class="badge">RECH</span>
+                    <span class="badge">CNRS</span>
+                    <span class="status-badge status-done" data-i18n="status-done">✓ Terminé</span>
                 </div>
-                <h3 data-i18n="proj5-title">PDF Link Parser (CNRS)</h3>
-                <p data-i18n="proj5-desc">Plugin web de parsing de documents PDF pour identifier et extraire automatiquement les liens lors d'un stage au CNRS.</p>
+                <h3 data-i18n="proj5-title">Halien — Extension Firefox "PDF Links"</h3>
+                <p data-i18n="proj5-desc">Extension Firefox développée lors du stage au CNRS (Laboratoire Jean Kuntzmann, Grenoble). Extraction et classification automatique de liens forge (GitHub, GitLab…) depuis des PDFs scientifiques HAL pour les modérateurs d'archives.</p>
                 <div class="tech-stack">
-                    <span>Python</span>
-                    <span>JavaScript</span>
-                    <span>PDF parsing</span>
+                    <span>JavaScript</span><span>Firefox API</span><span>PDF.js</span><span>HAL</span>
                 </div>
             </a>
-
         </div>
     </section>
 
+    <!-- HOBBIES -->
     <section id="passions" class="hidden-section">
-        <h2 class="title" data-i18n="sec-hobbies-title">&lt;Hobbies /&gt;</h2>
-        <div class="skills-container"> <div class="skill-box passion-box">
-                <i class="fa-solid fa-chart-line"></i>
-                <h3 data-i18n="hobby1-title">Analyse Financière</h3>
-                <p data-i18n="hobby1-desc">Étude des marchés et corrélation des actifs boursiers.</p>
+        <h2 class="section-title"><span class="title-bracket">&lt;</span>Hobbies<span class="title-bracket">/&gt;</span></h2>
+        <div class="hobbies-grid">
+            <div class="hobby-card">
+                <div class="hobby-icon">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <div class="hobby-content">
+                    <h3 data-i18n="hobby1-title">Analyse Financière</h3>
+                    <p data-i18n="hobby1-desc">Étude des marchés financiers, analyse technique et corrélation des actifs boursiers. À l'origine du projet Financial Dashboard, un outil d'analyse automatisée développé en PWA.</p>
+                </div>
             </div>
-            <div class="skill-box passion-box">
-                <i class="fas fa-snowflake"></i>
-                <h3 data-i18n="hobby2-title">Ski Freeride</h3>
-                <p data-i18n="hobby2-desc">Navigation hors-piste et gestion des risques en montagne.</p>
+            <div class="hobby-card">
+                <div class="hobby-icon">
+                    <i class="fas fa-mountain-snow"></i>
+                </div>
+                <div class="hobby-content">
+                    <h3 data-i18n="hobby2-title">Ski Freeride</h3>
+                    <p data-i18n="hobby2-desc">Navigation hors-piste et gestion des risques en haute montagne. Lecture du terrain, adaptation aux conditions changeantes — une discipline qui développe rigueur et prise de décision rapide.</p>
+                </div>
             </div>
-            <div class="skill-box passion-box">
-                <i class="fa-solid fa-drum"></i>
-                <h3 data-i18n="hobby3-title">Batterie</h3>
-                <p data-i18n="hobby3-desc">Pratique instrumentale et performance en concerts.</p>
+            <div class="hobby-card">
+                <div class="hobby-icon">
+                    <i class="fa-solid fa-drum"></i>
+                </div>
+                <div class="hobby-content">
+                    <h3 data-i18n="hobby3-title">Batterie</h3>
+                    <p data-i18n="hobby3-desc">Pratique instrumentale depuis plusieurs années, avec des expériences en concert. La batterie développe coordination, sens du rythme et capacité à travailler en groupe sous pression.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer id="contact">
-        <h2 data-i18n="contact-title">Initiate_Contact</h2>
-        <p data-i18n="contact-desc">Prêt à rejoindre votre infrastructure.</p>
-        <a href="mailto:chamossetf74@gmail.com" class="email-link" aria-label="Envoyer un email">chamossetf74@gmail.com</a>
-        <div class="socials">
-            <a href="https://linkedin.com/in/francois-chamosset" aria-label="Profil LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-            <a href="https://github.com/Nedvuss" target="_blank" aria-label="Profil GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+    <!-- CONTACT -->
+    <section id="contact" class="hidden-section">
+        <h2 class="section-title"><span class="title-bracket">&lt;</span><span data-i18n="contact-section-title">Travaillons Ensemble</span><span class="title-bracket">/&gt;</span></h2>
+        <p class="contact-desc" data-i18n="contact-section-desc">Actuellement en recherche active d'une alternance en cybersécurité, réseau ou administration système pour l'année 2026-2027. N'hésitez pas à me contacter.</p>
+        <a href="mailto:chamossetf74@gmail.com" class="contact-email" aria-label="Envoyer un email">chamossetf74@gmail.com</a>
+        <div class="contact-socials">
+            <a href="https://linkedin.com/in/francois-chamosset" class="social-btn" aria-label="LinkedIn" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/Nedvuss" class="social-btn" aria-label="GitHub" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+            </a>
         </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
         <p class="copyright" data-i18n="footer-copy">© 2026 François Chamosset | root@localhost</p>
     </footer>
 
